@@ -1,0 +1,763 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 0;
+    outline: none;
+    font-family: "Nunito", sans-serif;
+}
+
+:root {
+    --bg-color: #191f36;
+    --text-color: rgb(255, 255, 255);
+    --accent-color: #1abc9c;
+    --text-light: #ecf0f1;
+    --btn-bg-color: #1abc9c;
+    --btn-text-color: #fff;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    cursor: default;
+    font-weight: 700;
+}
+
+.navbar a {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 700;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--accent-color);
+}
+
+#icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+    cursor: pointer;
+}
+
+
+/* Home Section Styling starts here .........  */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15vh 3vw;
+    flex-wrap: wrap;
+}
+
+.home_content_wrapper {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    font-size: 3.5rem;
+    gap: 2rem;
+}
+
+.social-media a {
+    color: var(--text-color);
+    text-align: center;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: var(--accent-color);
+}
+
+.home_content {
+    max-width: 600px; /* Limit width for better alignment */
+}
+
+.home_content h3 {
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.home_content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+}
+
+.home_content p {
+    font-size: 1.6rem; /* Increased font size */
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.dynamic-text {
+    font-weight: bold;
+    animation: changeColor 10s infinite;
+}
+
+@keyframes changeColor {
+    0% {
+        color: #ff5733; /* Example color 1 */
+    }
+    33% {
+        color: #33ff57; /* Example color 2 */
+    }
+    66% {
+        color: #3d61ff; /* Example color 3 */
+    }
+    100% {
+        color: #ff5733; /* Example color 1 again to loop */
+    }
+}
+
+.btn {
+    display: inline-block;
+}
+
+.btn button {
+    background-color: var(--btn-bg-color);
+    color: var(--btn-text-color);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn button:hover {
+    background-color: #159a7c; /* Adjusted color for hover */
+}
+
+.home-img {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Align to the right */
+    align-items: center;
+    max-width: 100%; /* Added for better scaling */
+}
+
+.home-img img {
+    max-width: 40vw; /* Adjusted to use vw for responsive scaling */
+    height: auto;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .navbar a {
+        margin: 1rem 0;
+    }
+
+    #icon {
+        display: block;
+    }
+
+    .home {
+        flex-direction: column;
+        align-items: center;
+        padding: 10vh 2vw; /* Adjusted for better scaling */
+    }
+
+    .home_content h1 {
+        font-size: 4rem;
+    }
+
+    .home_content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home_content p {
+        font-size: 1.6rem; /* Maintained larger font size */
+    }
+
+    .social-media {
+        font-size: 3rem;
+    }
+
+    .btn button {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .home-img img {
+        max-width: 60vw; /* Adjusted for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 50%;
+    }
+
+    .home_content h1 {
+        font-size: 3.2rem;
+    }
+
+    .home_content h3 {
+        font-size: 2.5rem; /* Increased for better readability */
+    }
+
+    .home_content p {
+        font-size: 1.6rem; /* Maintained larger font size */
+    }
+
+    .social-media {
+        font-size: 2.5rem;
+    }
+
+    .btn button {
+        font-size: 1.2rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .home-img img {
+        max-width: 80vw; /* Adjusted for smallest screens */
+    }
+}
+/* home section ends here.............  */
+
+
+
+/* About Section styling starts here ...... */
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5vw;
+    padding: 10vh 5vw;
+    background: var(--bg-color); /* Use the same background color for consistency */
+    flex-wrap: wrap;
+}
+
+.about-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img {
+    width: 35vw;
+    max-width: 500px; /* Max width for better scaling */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.heading {
+    text-align: left;
+    font-size: 4.5rem;
+    color: var(--text-light); /* Adjusted color */
+}
+
+.heading span {
+    color: var(--accent-color);
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+    color: #e8f0fe;
+    font-weight: 500;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--btn-bg-color);
+    color: var(--btn-text-color);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #159a7c; /* Adjusted color for hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+        padding: 5vh 3vw;
+         color:var(--accent-color) ;
+    }
+
+    .about-img img {
+        width: 50vw;
+        max-width: 300px;
+    }
+
+    .heading {
+        text-align: center;
+        color:var(--accent-color) ;
+       
+    }
+
+    .about-content {
+        margin-top: 2rem;
+    }
+
+    .about-content h2 {
+        text-align: center;
+        color:var(--accent-color);
+    }
+
+   
+    .about-content p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 50%;
+    }
+
+    .about-img img {
+        width: 70vw;
+        max-width: none;
+    }
+
+
+    .about-content p {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
+/* About Section Styling ends here.......... */
+
+
+
+/* Skills Section Styling start here............. */
+.skills {
+    padding: 10vh 5vw;
+    background: var(--bg-color);
+    text-align: center;
+    color: var(--text-light);
+}
+
+.skills h2 {
+    font-size: 4.5rem;
+    margin-bottom: 5rem;
+    color: var(--accent-color);
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.skill-box {
+    background: var(--bg-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 2rem;
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+}
+
+.skill-box h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+.skill-box p {
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.skill-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .skill-box {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 50%;
+    }
+
+    .skills h2 {
+        font-size: 3.5rem;
+    }
+
+    .skill-box {
+        width: 90%;
+    }
+
+    .skill-box h3 {
+        font-size: 2rem;
+    }
+
+    .skill-box p {
+        font-size: 1.4rem;
+    }
+}
+
+/* Skill Section Styling ends here...........*/
+
+
+
+
+/* Projects Section Styling Starts here..............*/
+.projects {
+    padding: 10vh 5vw;
+    background: var(--bg-color);
+    text-align: center;
+    color: var(--text-light);
+}
+
+.projects h2 {
+    font-size: 4.5rem;
+    margin-bottom: 5rem;
+    color: var(--accent-color);
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.project-box {
+    background: var(--bg-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 2rem;
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+}
+
+.project-box h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+.project-box p {
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.project-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .project-box {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 50%;
+    }
+
+    .projects h2 {
+        font-size: 3.5rem;
+    }
+
+    .project-box {
+        width: 90%;
+    }
+
+    .project-box h3 {
+        font-size: 2rem;
+    }
+
+    .project-box p {
+        font-size: 1.4rem;
+    }
+}
+
+/*Project Section Styling ends here........... */
+
+
+
+/* Contact Title styling starts.....*/
+.section-title,
+.title-connect {
+    text-align: center;
+    font-size: 4.5rem;
+    color: #1abc9c;
+    margin-bottom: 2rem;
+}
+
+.title-connect {
+    font-size: 3.5rem; /* Reduced font size for the "Connect with me" title */
+}
+/* Contact Title Styling ends here........ */
+
+
+
+
+/* Contact Me Section Starts here.......*/
+.contact-me {
+    padding: 4rem 5vw;
+    background: #1e2539;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align content in center */
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.contact-headline {
+    text-align: center;
+    font-size: 3rem;
+    color: #1abc9c;
+    margin-bottom: 2rem;
+}
+
+.social-media2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem; /* Reduced gap between icons */
+    font-size: calc(3vh + 3vw); /* Adjusted icon size */
+    padding: 3rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.social-media2 a {
+    color: #fff;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-media2 a:hover {
+    color: #1abc9c;
+    transform: scale(1.2);
+}
+
+.contact-form {
+    flex: 1;
+    max-width: 500px;
+    width: 100%;
+    padding: 2rem;
+    animation: slideInRight 2s ease-in-out;
+    text-align: center; /* Align content in center */
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+.contact-form .form-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    background: #f0f0f0;
+    color: #333;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background: #e8f0fe;
+    border-color: #1abc9c;
+    
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form button {
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    border: none;
+    background: #1abc9c;
+    color: #fff;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+    background: #159a7c;
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    background: #1e2539;
+    padding: 2rem 5vw;
+    text-align: center;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-media2 {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        font-size: calc(10vh + 10vw); /* Adjusted icon size for smaller screens */
+    }
+
+    .social-media2 a {
+        font-size: calc(7vh + 7vw); /* Adjusted icon size for smaller screens */
+    }
+
+    .contact-form {
+        padding: 0;
+    }
+}
+
+/* Contact Section styling ends here.... */
+
+/*  CSS Styling finishes  */
