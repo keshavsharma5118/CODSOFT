@@ -5,15 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Odishaah! India's Best Kept Secret</title>
+    <title>AmaOdisha</title>
 </head>
 
 <body>
-
     <header class="header">
         <nav>
             <div class="logo">Ama <img src="img/chakra.png" alt="Odisha">disha</div>
-
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -22,6 +20,7 @@
                 <li><a href="#discover" class="btn-nav">Discover</a></li>
                 <li><a href="#login" class="btn-nav">Login</a></li>
             </ul>
+            <div id="icon">☰</div>
         </nav>
     </header>
 
@@ -37,83 +36,69 @@
             </div>
         </section>
 
-        <!-- Skills Section -->
-    <section class="attracts" id="attracts">
-        <h2>Top Attractions</h2>
-        <div class="attracts-container">
-            <div class="attracts-box">
-                <img src="img/puri.png" alt="#">
-                <h3>Jagannath Puri: Where Divinity Meets Devotion</h3>
-                <p>Lord Jagannath, revered in Puri's ancient temple, symbolizes divine love and spiritual enlightenment, drawing pilgrims seeking blessings and solace</p>
+        <section class="attracts" id="attracts">
+            <h2>Top Attractions</h2>
+            <div class="attracts-container">
+                <div class="attracts-box">
+                    <img src="img/puri.png" alt="Jagannath Puri">
+                    <h3>Jagannath Puri: Where Divinity Meets Devotion</h3>
+                    <p>Lord Jagannath, revered in Puri's ancient temple, symbolizes divine love and spiritual enlightenment, drawing pilgrims seeking blessings and solace.</p>
+                </div>
+                <div class="attracts-box">
+                    <img src="img/lingraj.png" alt="Temples and Monuments">
+                    <h3>Temples and Monuments</h3>
+                    <p>Imposing structures and skilful craftsmanship transcends time & captures your imagination.</p>
+                </div>
+                <div class="attracts-box">
+                    <img src="img/beaches.png" alt="Beaches">
+                    <h3>Beaches Serenity unplugged!</h3>
+                    <p>Watch the sea toss and turn, find a moment to yourself as the wave’s crash against time!</p>
+                </div>
+                <div class="attracts-box">
+                    <img src="img/wildlife.png" alt="Ecotourism & Wildlife">
+                    <h3>Ecotourism & Wildlife Reconnect with nature</h3>
+                    <p>Reunite with yourself & let the wilderness take you home.</p>
+                </div>
+                <div class="attracts-box">
+                    <img src="img/odishi.png" alt="Cultural Heritage">
+                    <h3>Cultural Heritage Experience true bliss</h3>
+                    <p>Odisha has a glorious tradition of music and dance.</p>
+                </div>
+                <div class="attracts-box">
+                    <img src="img/art.png" alt="Arts and Crafts">
+                    <h3>Arts and crafts Art finds a voice</h3>
+                    <p>Vibrant and utilitarian, the artefacts of Odisha are prized possession of a connoisseur.</p>
+                </div>
             </div>
-            <div class="attracts-box">
-                <img src="img/lingraj.png" alt="#">
-                <h3>Temples and Monuments</h3>
-                <p>Imposing structures and skilful craftsmanship transcends time & captures your imagination.
-            </div>
-            <div class="attracts-box">
-                <img src="img/beaches.png" alt="#">
-                <h3>Beaches
-                    Serenity unplugged!</h3>
-                <p>Watch the sea toss and turn, find a moment to yourself as the wave’s crash against time!</p>
-            </div>
-            <div class="attracts-box">
-                <img src="img/wildlife.png" alt="#">
-                <h3>Ecotourism & Wildlife
-                    Reconnect with nature</h3>
-                <p>Reunite with yourself & let the wilderness take you home.</p>
-            </div>
-            <div class="attracts-box">
-                <img src="img/odishi.png" alt="#">
-                <h3>Cultural Heritage
-                    Experience true bliss</h3>
-                <p>Odisha has a glorious tradition of music and dance</p>
-            </div>
-            <div class="attracts-box">
-                <img src="img/art.png" alt="#">
-                <h3>Arts and crafts
-                    Art finds a voice</h3>
-                <p>Vibrant and utilitarian, the artefacts of Odisha are prized possession of a connoisseur.</p>
-            </div>
-        </div>
-    </section>
-    <!-- skills section ends here -->
+        </section>
 
-    <!-- contact section begins here  -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Have questions or need assistance? Feel free to reach out to us!</p>
-    
-            <form id="contact-form" action="#" method="POST">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-    
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-    
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                </div>
-    
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-        </div>
-    </section>
-    <!-- contact section ends here -->
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Have questions or need assistance? Feel free to reach out to us!</p>
+                <form id="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Full Name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Email Address" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" n ame="message" placeholder="Your Message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <p>&copy; 2024 Ama Odisha. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
-
 </body>
-
 </html>
