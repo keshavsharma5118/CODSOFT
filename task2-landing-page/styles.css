@@ -1,0 +1,308 @@
+/* Reset default browser styles */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 0;
+    outline: none;
+    font-family: "Nunito", sans-serif; /* Default to "Nunito" font */
+}
+
+/* Root variables for colors */
+:root {
+    --bg-color: #088c3a;
+    --text-color: rgb(255, 255, 255);
+    --accent-color: #f9fafb;
+    --text-light: #ecf0f1;
+    --btn-bg-color: #1a4bbc;
+    --btn-text-color: #fff;
+}
+
+/* General styles for HTML and body */
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+body {
+    background: var(--accent-color); /* Set background color */
+    font-family: "Nunito", sans-serif; /* Apply "Nunito" font to body */
+}
+
+/* Header styles */
+
+header {
+    background-color: #260d98f9;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 1.5rem;
+    width: auto;
+    padding-left: 5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.btn-nav {
+    background-color: #0056b3;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-nav:hover {
+    background-color: #003d80;
+}
+
+#icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none; /* Hidden by default */
+    cursor: pointer;
+}
+
+/* Main content and section styles */
+
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: url('img/odishaah.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Ensures content is above the overlay */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background to improve readability */
+    border-radius: 10px;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero-section p {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e68900;
+}
+
+section {
+    padding: 3.75rem 0; /* Top and bottom padding for sections */
+    text-align: center;
+    border-bottom: 0.063rem solid #ccc; /* Bottom border */
+}
+
+section h2 {
+    color: #333;
+    margin-bottom: 1.25rem; /* Bottom margin for section headings */
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 0.625rem 0; /* Padding top and bottom */
+}
+
+/* Button styles */
+.btn {
+    padding: 1rem 2rem;
+    background-color: var(--btn-bg-color);
+    color: var(--btn-text-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #16a085; /* Darker shade of accent color on hover */
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 1rem 0; /* Adjust header padding */
+    }
+
+    .navbar {
+        display: none; /* Hide navbar links by default */
+        flex-direction: column; /* Stack menu items vertically */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--bg-color); /* Background color */
+        width: 100%;
+        padding: 1rem 0; /* Padding around menu items */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow */
+        z-index: 999;
+        transition: display 0.3s ease;
+    }
+
+    .navbar a {
+        margin-left: 0; /* Remove margin for links */
+        padding: 1rem; /* Padding around links */
+        font-size: 1.6rem; /* Font size for links */
+    }
+
+    #icon {
+        display: block; /* Display hamburger icon */
+        font-size: 3.6rem; /* Font size for icon */
+        color: var(--text-color); /* Icon color */
+        cursor: pointer;
+    }
+
+    .navbar.active {
+        display: flex; /* Display navbar links when active */
+    }
+
+    /* Adjust button styles for smaller screens */
+    .btn {
+        margin-top: 1rem; /* Add margin between buttons */
+        width: 100%; /* Full width */
+        text-align: center; /* Center text */
+    }
+}
+
+/* attracts Section Styling start here............. */
+.attracts {
+    padding: 10vh 5vw;
+    background: var(--bg-color);
+    text-align: center;
+    color: var(--text-light);
+}
+
+.attracts h2 {
+    font-size: 4.5rem;
+    margin-bottom: 5rem;
+    color: var(--accent-color);
+}
+
+.attracts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.attracts-box {
+    background: var(--bg-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 2rem;
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.attracts-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+}
+
+.attracts-box h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+.attracts-box p {
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.attracts-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .attracts-box {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 50%;
+    }
+
+    .attracts h2 {
+        font-size: 3.5rem;
+    }
+
+    .attracts-box {
+        width: 90%;
+    }
+
+    .attracts-box h3 {
+        font-size: 2rem;
+    }
+
+    .attracts-box p {
+        font-size: 1.4rem;
+    }
+}
+
+/* attracts Section Styling ends here...........*/
