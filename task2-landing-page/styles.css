@@ -69,7 +69,7 @@ nav {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 3rem;
 }
 
 .nav-links li {
