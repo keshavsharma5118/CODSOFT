@@ -34,7 +34,7 @@ body {
 
 /* Navbar section starts */
 .header {
-    background-color: #0bd500;
+    background-color: #1e8618;
     position: fixed;
     width: 100%;
     top: 0;
@@ -194,7 +194,7 @@ nav {
     height: 100%;
     background: url('img/konark.png') no-repeat center center/cover;
     background-size: cover;
-    opacity: 0.5; /* Adjust the opacity value as needed */
+    opacity: 0.6; /* Adjust the opacity value as needed */
 }
 
 /* Adjust hero content styles as per your design */
@@ -257,6 +257,7 @@ section h2 {
     background: rgba(0, 0, 0, 1)url('img/attract-background.png') no-repeat center center/cover;
     background-size: cover;
     text-align: center;
+    
 }
 
 .attracts h2 {
