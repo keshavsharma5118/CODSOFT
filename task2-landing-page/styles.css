@@ -230,20 +230,6 @@ section h2 {
     font-size: 3rem;
 }
 
-
-.btn {
-    padding: 1rem 2rem;
-    background-color: var(--btn-bg-color);
-    color: var(--btn-text-color);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #16a085;
-}
 /* hero section starts here  */
 
 
@@ -420,7 +406,7 @@ form textarea {
 
 .btn {
     padding: 0.75rem 1.5rem;
-    background-color: #4646ef;
+    background-color: #0f0ffc;
     color: #ffffff;
     border: none;
     border-radius: 4px;
@@ -431,7 +417,7 @@ form textarea {
 }
 
 .btn:hover {
-    background-color: #033772;
+    background-color: #089c7c;
 }
 /* End of Contact section styles */
 
