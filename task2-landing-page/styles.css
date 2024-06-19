@@ -18,7 +18,7 @@
     --text-color: rgb(255, 255, 255);
     --accent-color: #fff7f7;
     --text-light: #ecf0f1;
-    --btn-bg-color: #09ca36;
+    --btn-bg-color: #9527f6;
     --btn-text-color: #fff;
 }
 
@@ -74,7 +74,8 @@ nav {
 
 .nav-links li {
     position: relative;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: medium;
 }
 
 .nav-links a {
