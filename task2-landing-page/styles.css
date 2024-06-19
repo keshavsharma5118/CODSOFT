@@ -18,7 +18,7 @@
     --text-color: rgb(255, 255, 255);
     --accent-color: #fff7f7;
     --text-light: #ecf0f1;
-    --btn-bg-color: #00de34;
+    --btn-bg-color: #09ca36;
     --btn-text-color: #fff;
 }
 
@@ -34,7 +34,7 @@ body {
 
 /* Navbar section starts */
 .header {
-    background-color: #14bb0b;
+    background-color: #0bd500;
     position: fixed;
     width: 100%;
     top: 0;
@@ -363,7 +363,7 @@ section h2 {
     max-width: 80%;
 }
 
-.container h2 {
+.container h1 {
     margin-bottom: 1.5rem;
     color: #5d11b3; /* Adjusted heading color */
     background-color: #fa9a3a;
@@ -375,9 +375,9 @@ section h2 {
 
 .container p {
     margin-bottom: 2rem;
-    color: #880afe;
+    color: #480389;
     font-size: 1.8rem; /* Adjusted font size for responsiveness */
-    font-weight: 600; /* Adjusted font weight */
+    font-weight: 800; /* Adjusted font weight */
     background-color: #d0f41e;
     padding: 0.5rem 1rem; /* Adjusted padding for better fit */
     border-radius: 1.5rem;
