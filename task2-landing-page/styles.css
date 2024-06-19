@@ -14,11 +14,11 @@
 
 /* Root variables for colors */
 :root {
-    --bg-color: #261998;
+    --bg-color: #0089fa;
     --text-color: rgb(255, 255, 255);
     --accent-color: #fff7f7;
     --text-light: #ecf0f1;
-    --btn-bg-color: #23ba5a;
+    --btn-bg-color: #00de34;
     --btn-text-color: #fff;
 }
 
@@ -28,13 +28,13 @@ html {
 }
 
 body {
-  background-color: black;
+  background-color: rgb(38, 44, 45);
     font-family: "Nunito", sans-serif;
 }
 
 /* Navbar section starts */
 .header {
-    background-color: #260d98f9;
+    background-color: #14bb0b;
     position: fixed;
     width: 100%;
     top: 0;
@@ -171,26 +171,36 @@ nav {
 
 
 
-
-
-/* hero section starts here  */
+/* hero section starts here */
 .hero-section {
     position: relative;
     height: 100vh;
-    background: url('img/odishaah.png') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     text-align: center;
-    background-size: cover;
+    overflow: hidden; /* Ensure content doesn't overflow */
 }
 
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img/konark.png') no-repeat center center/cover;
+    background-size: cover;
+    opacity: 0.5; /* Adjust the opacity value as needed */
+}
+
+/* Adjust hero content styles as per your design */
 .hero-content {
     position: relative;
     z-index: 2;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6); /* Example overlay background for content */
     border-radius: 10px;
 }
 
@@ -219,6 +229,7 @@ nav {
     background-color: #e68900;
 }
 
+
 section {
     padding: 5rem 0;
     text-align: center;
@@ -241,7 +252,7 @@ section h2 {
     padding: 10vh 5vw;
     background: var(--bg-color);
     color: var(--text-light);
-    background: url('img/attract-background.png') no-repeat center center/cover;
+    background: rgba(0, 0, 0, 1)url('img/attract-background.png') no-repeat center center/cover;
     background-size: cover;
     text-align: center;
 }
